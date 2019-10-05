@@ -30,6 +30,7 @@ def find(path, start_str, end_str):
 def search(path, fname):
     """
     find the file name in the path and its subpath
+
     :param path: ``str``, start path
     :param name: ``str``, target file name
     :return: ``str``, full path of the file
