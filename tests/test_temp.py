@@ -1,10 +1,18 @@
-from utils import file2df, df2file, find
+import pytest
 
-path = r'C:\Users\HUK\Desktop\Scrapy_Learning\Scrapy_Lianjia\outdata'
+class TestClass:
+        def test_one(self):
+            x = "this"
+            assert 'h' in x
 
-csv_list = find(path= path, start_str='huk', end_str='csv')
+        def test_two(self):
+            x = "hello"
+            assert hasattr(x, 'check')
 
-df0 = file2df(csv_list[0])
+        def test_three(self):
+            a = "hello"
+            b = "hello world"
+            assert a in b
 
-print(df0)
-df2file(df0, fname= 'df0_test.txt', outpath=path)
+if __name__ == "__main__":
+    pytest.main(['-q', '--html=test_temp_report.html','test_temp.py'])
